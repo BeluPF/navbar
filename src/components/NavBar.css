@@ -9,12 +9,25 @@ justify-content: center;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    float: right;
+   
 }
+
+.shoppingCart {
+    size-adjust: 2x;
+    justify-content: right;
+
+
+}
+
 .li1 {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+.nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:left
 }
