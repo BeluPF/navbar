@@ -4,6 +4,7 @@ import "./components/UserCard/UserCard.css";
 import NavBar from "./components/NavBar";
 import UserCard from "./components/UserCard/UserCard";
 import itemListContainer from "./components/itemListContainer";
+import contador from "./components/cartwidget"
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
       </div>
     </div>
   );
+
+
 }
 
 export default App;
