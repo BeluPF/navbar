@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Contador />
+      
       <ItemListContainer
           greeting="Hola Maria Belén"
       />
@@ -22,6 +22,7 @@ function App() {
           description= "fe dev"
           img="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
         />
+        
         <UserCard
           name="Alberta Gomez"
           date="se unió en enero 2018"
@@ -46,6 +47,7 @@ function App() {
           info="fe dev"
           img="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
         />
+        <Contador />
       </div>
     </div>
   );
