@@ -1,12 +1,14 @@
-import React from "react";
 
-const itemListContainer = ({greeting}) =>{
+
+const ItemListContainer = ({greeting}) =>{
 return (
+   <div>
    {greeting}
+   </div>
 );
 };
 
-export default itemListContainer;
+export default ItemListContainer;
 
 
 

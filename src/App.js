@@ -3,15 +3,16 @@ import "./App.css";
 import "./components/UserCard/UserCard.css";
 import NavBar from "./components/NavBar";
 import UserCard from "./components/UserCard/UserCard";
-import itemListContainer from "./components/itemListContainer";
-import contador from "./components/cartwidget"
+import ItemListContainer from "./components/ItemListContainer";
+import Contador from "./components/cartwidget"
 
 
 function App() {
   return (
     <div>
       <NavBar />
-      <itemListContainer
+      <Contador />
+      <ItemListContainer
           greeting="Hola Maria Belén"
       />
       <div className="UserCard">
