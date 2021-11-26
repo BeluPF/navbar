@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 
-const UserCard = ({ img, name, date, description }) => (
+const UserCard = ({data}) => (
   <Card>
-    <Image src={img} wrapped ui={false} />
+    <Image src={data.avatar_url} wrapped ui={false} />
     <Card.Content>
-      <Card.Header>{name}</Card.Header>
-      <Card.Meta>{date}</Card.Meta>
-      <Card.Description>{description}</Card.Description>
+      <Card.Header>{data.login}</Card.Header>
+      <Card.Meta>{data.id}</Card.Meta>
+      <Card.Description>{data.url}</Card.Description>
     </Card.Content>
   </Card>
 );

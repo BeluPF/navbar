@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import UserCard from "./components/UserCard/UserCard";
 import ItemListContainer from "./components/ItemListContainer";
 import Contador from "./components/ItemCount"
+import CardContainer from "./components/UserCard/CardContainer";
 
 
 function App() {
@@ -15,11 +16,7 @@ function App() {
           greeting="Hola Maria Belén"
       />
       <div className="UserCard">
-        <UserCard
-          name="Daniel Di Salvo"
-          date="se unió en enero 2021"
-          description= "fe dev"
-          img="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
+        <CardContainer
         />
         
         <UserCard
