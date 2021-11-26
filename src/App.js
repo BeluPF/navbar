@@ -4,7 +4,7 @@ import "./components/UserCard/UserCard.css";
 import NavBar from "./components/NavBar";
 import UserCard from "./components/UserCard/UserCard";
 import ItemListContainer from "./components/ItemListContainer";
-import Contador from "./components/cartwidget"
+import Contador from "./components/ItemCount"
 
 
 function App() {
