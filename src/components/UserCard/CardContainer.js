@@ -7,13 +7,11 @@ const CardContainer = () => {
         fetch('https://api.github.com/users')
         .then((response) => response.json())
         .then((json)=>setUsers(json));
-
     }, [] );
     return (
         <div>
-            <h1>CardContainer</h1>
-            {users.map((user)=>{
-                return <CardUser data={user} />;
+             {users.map((user)=>{
+             return <CardUser data={user} />;
             })}
         </div>
     )

@@ -2,7 +2,6 @@
 import "./App.css";
 import "./components/UserCard/UserCard.css";
 import NavBar from "./components/NavBar";
-import UserCard from "./components/UserCard/UserCard";
 import ItemListContainer from "./components/ItemListContainer";
 import Contador from "./components/ItemCount"
 import CardContainer from "./components/UserCard/CardContainer";
@@ -19,7 +18,7 @@ function App() {
         <CardContainer
         />
         
-        <UserCard
+ {/*       <UserCard
           name="Alberta Gomez"
           date="se unió en enero 2018"
           description="backend dev"
@@ -42,7 +41,7 @@ function App() {
           date="se unió en enero 2021"
           info="fe dev"
           img="https://react.semantic-ui.com/images/avatar/large/elliot.jpg"
-        />
+ /> */}
         <Contador />
       </div>
     </div>
