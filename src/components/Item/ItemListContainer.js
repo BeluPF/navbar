@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import CardUser from '../UserCard/UserCard';
+import ItemList from '../Item/ItemList';
 
-const CardContainer = () => {
+
+const ItemListContainer = () => {
     const [users, setUsers]= useState ([]);
     useEffect (() =>{
         fetch('https://api.github.com/users')
@@ -10,10 +11,8 @@ const CardContainer = () => {
     }, [] );
     return (
         <div>
-             {users.map((user)=>{
-             return <CardUser data={user} />;
-            })}
+        <ItemList users={users}/>
         </div>
     )
 }
-export default CardContainer;
+export default ItemListContainer;
