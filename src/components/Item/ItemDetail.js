@@ -1,18 +1,13 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import Contador from "./ItemCount";
-import "./Item.css";
-import { useNavigate } from "react-router-dom";
 
-
-
-const Item = ({data}) => {
+const ItemDetail = ({data}) => {
+  console.log(data)
+  return(
   
-  let navigate = useNavigate();
-  
-  return (
-  <Card ClassName="Item" >
-    <Image src={data.avatar_url} wrapped ui={false} onClick={ () => navigate("/item/"+data.id)}/>
+  <Card>
+    <Image src={data.avatar_url} wrapped ui={false} />
     <Card.Content>
       <Card.Header>{data.login}</Card.Header>
       <Card.Meta>{data.id}</Card.Meta>
@@ -21,6 +16,6 @@ const Item = ({data}) => {
     </Card.Content>
   </Card>
 
-);
-  }
-export default Item;
+);}
+
+export default ItemDetail;
