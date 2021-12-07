@@ -11,7 +11,7 @@ const Item = ({data}) => {
   let navigate = useNavigate();
   
   return (
-  <Card ClassName="Item" >
+  <Card className="Item" >
     <Image src={data.avatar_url} wrapped ui={false} onClick={ () => navigate("/item/"+data.id)}/>
     <Card.Content>
       <Card.Header>{data.login}</Card.Header>

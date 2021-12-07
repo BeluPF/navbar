@@ -8,9 +8,13 @@ const ItemListContainer = () => {
         fetch('https://api.github.com/users')
         .then((response) => response.json())
         .then((json)=>setUsers(json));
+        
     }, [] );
+    
     return (
+        
         <div>
+            {console.log(users)}
         <ItemList users={users}/>
         </div>
     )
