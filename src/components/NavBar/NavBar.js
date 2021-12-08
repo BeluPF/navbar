@@ -15,7 +15,7 @@ function NavBar() {
                 <li className="li1">Pares</li>
                 
             </ul>
-            <Icon name='shopping cart' className="shoppingCart"></Icon>
+            <Icon name='shopping cart' className="shoppingCart" onClick={ () => navigate ("/cart")}></Icon>
         </nav>
     );
 }
