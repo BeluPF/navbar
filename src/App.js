@@ -6,8 +6,9 @@ import ItemDetailContainer from "./components/Item/ItemDetailContainer";
 import ItemListContainer from "./components/Item/ItemListContainer";
 import Cart from "./components/cart/Cart";
 import NavBar from "./components/NavBar/NavBar";
+import CartProvider from "./components/cart/CartProvider";
 function App() {
-  return (
+  return (<CartProvider>
 
     <>
    
@@ -23,7 +24,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-   
+    </CartProvider>
   );
 
 
