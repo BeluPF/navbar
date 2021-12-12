@@ -10,11 +10,15 @@ const ItemDetail = ({data}) => {
  const [itemCounter, setItemCounter] = React.useState(0);
   const saveCounter = (counter) => {
       const prodCart = {id:data.id, url:data.url, cant:counter}
-      
-      setState([...state, prodCart]);
-      console.log(state);
+      const checkForItems = state.filter(value => value.id === data.id)
+      console.log("esto es checkforitems: ", checkForItems);
+      if ((checkForItems.length > 0)) {
+        alert ("producto ya añadido, vaya al carrito para ajustar cantidades")
+      } else {      
+        setState([...state, prodCart]);
+      }
   }
-
+  console.log(state);
   return(
 
   <Card className="ItemDetail">

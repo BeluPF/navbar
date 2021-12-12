@@ -21,7 +21,6 @@ const Item = ({data}) => {
       <Card.Header>{data.login}</Card.Header>
       <Card.Meta>{data.id}</Card.Meta>
       <Card.Description>{data.url}</Card.Description>
-      <Contador countItem={saveCounter}/>
     </Card.Content>
   </Card>
 
