@@ -12,6 +12,7 @@ const ItemDetailContainer = () => {
         .then((response) => response.json())
         .then((json)=>setUser(json));
     }, [id] );
+    
     return (
         <div>
         <ItemDetail data={user}/>
