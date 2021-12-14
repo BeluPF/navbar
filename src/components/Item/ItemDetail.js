@@ -2,7 +2,7 @@ import React,  {useContext} from "react";
 import { Card, Image } from "semantic-ui-react";
 import Contador from "./ItemCount";
 import './ItemDetail.css';
-import CartContext from "../cart/CartContext";
+import CartContext from "../../context/CartContext";
 
 const ItemDetail = ({data}) => { 
   const [state, setState] = useContext(CartContext);
