@@ -1,10 +1,12 @@
 import React, {useContext} from "react";
 import CartContext from "../../context/CartContext";
 import { Grid, Image } from 'semantic-ui-react'
+import { useNavigate } from "react-router-dom";
 
 
 const Cart = () =>{
     const [state, setState, cantItems, cantProd, removeItem] = useContext(CartContext);
+    let navigate = useNavigate();
 return (
     <div>
     <h1>futuro carro de compras</h1>
@@ -27,6 +29,11 @@ return (
  </Grid>
     Cantidad de productos: {cantItems()}
     Cantidad de items: {cantProd()}
+    { cantProd()==0 && <div>
+        <h1>Carrito Vacio</h1>
+        <button onClick = { () => navigate("/")}>Volver a productos</button>
+        </div>
+        }
     </div>)
 
 }
