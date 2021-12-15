@@ -9,7 +9,7 @@ const ItemDetail = ({data}) => {
 
  const [itemCounter, setItemCounter] = React.useState(0);
   const saveCounter = (counter) => {
-      const prodCart = {id:data.id, url:data.url, cant:counter}
+      const prodCart = {id:data.login, url:data.url, cant:counter}
       const checkForItems = state.filter(value => value.id === data.id)
       console.log("esto es checkforitems: ", checkForItems);
       if ((checkForItems.length > 0)) {
