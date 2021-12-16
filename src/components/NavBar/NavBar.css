@@ -14,20 +14,28 @@ justify-content: center;
 
 .shoppingCart {
     size-adjust: 2x;
-    justify-content: right;
+
 
 
 }
 
 .li1 {
     display: inline-block;
+float:right;
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 14px 16px;
-    text-decoration: none;
 }
 .nav{
-    display:flex;
+    display:inline-block;
     flex-wrap:wrap;
-    justify-content:left
+    width: 100%;
+    
+}
+.li2 {
+    display: inline-block;
+    float: right;
+    color: white;
+    text-align: right;
+    padding: 14px 16px;
 }
