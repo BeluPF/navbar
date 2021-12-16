@@ -1,9 +1,8 @@
 import React,  {useContext} from "react";
 import { Card, Image } from "semantic-ui-react";
 import Contador from "./ItemCount";
-import './ItemDetail.css';
 import CartContext from "../../context/CartContext";
-
+import "./Item.css";
 const ItemDetail = ({data}) => { 
   const [state, setState] = useContext(CartContext);
 
@@ -21,7 +20,7 @@ const ItemDetail = ({data}) => {
   console.log(state);
   return(
 
-  <Card className="ItemDetail">
+  <Card className="Item">
     <Image src={data.avatar_url} wrapped ui={false} />
     <Card.Content>
       <Card.Header>{data.login}</Card.Header>

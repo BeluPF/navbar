@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from '../Item/ItemDetail';
 import { useParams } from 'react-router-dom';
-
+import "./Item.css";
 
 const ItemDetailContainer = () => {
     let id = useParams();
@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     }, [id] );
     
     return (
-        <div>
+        <div className='Item'>
         <ItemDetail data={user}/>
         </div>
     )

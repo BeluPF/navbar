@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from '../Item/ItemList';
-
+import "./Item.css"
 
 const ItemListContainer = () => {
     const [users, setUsers]= useState ([]);
@@ -14,7 +14,6 @@ const ItemListContainer = () => {
     return (
         
         <div>
-            {console.log(users)}
         <ItemList users={users}/>
         </div>
     )

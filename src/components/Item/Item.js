@@ -15,7 +15,8 @@ const Item = ({data}) => {
   let navigate = useNavigate();
   
   return (
-  <Card className="Item" >
+    <div className="Item">
+  <Card >
     <Image src={data.avatar_url} wrapped ui={false} onClick={ () => navigate("/item/"+data.id)}/>
     <Card.Content>
       <Card.Header>{data.login}</Card.Header>
@@ -23,7 +24,7 @@ const Item = ({data}) => {
       <Card.Description>{data.url}</Card.Description>
     </Card.Content>
   </Card>
-
+  </div>
 );
   }
 export default Item;
