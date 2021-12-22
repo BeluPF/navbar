@@ -1,10 +1,11 @@
 import React from "react";
 
-const Contador = ({countItem}) => {
+const Contador = ({countItem, stockItem}) => {
 
-  const [counter, setCounter] = React.useState(10);
+  const [counter, setCounter] = React.useState(parseInt(stockItem));
+  
   const handleCounterUp = () => {
-    if (counter !== 10) {
+    if (counter !== parseInt(stockItem)) {
     setCounter(counter+1)}}
   const handleCounterDown = () => {
     if (counter !== 0) {
@@ -12,12 +13,11 @@ const Contador = ({countItem}) => {
     }
   const onAdd = () => {
     countItem(counter)
-    setCounter(0)
   }
 
 return (
 <div>
-<p>Stock: {counter}</p>
+<p>Unidades a comprar: {counter}</p>
 <button onClick = {handleCounterUp}>Incrementar</button>
 <button onClick = {handleCounterDown}>Decrementar</button>
 <button onClick = {onAdd}>Agregar al carrito</button>

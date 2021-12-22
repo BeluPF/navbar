@@ -1,23 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import ItemDetail from '../Item/ItemDetail';
-import { useParams } from 'react-router-dom';
-import "./Item.css";
+import ItemList from '../Item/ItemList';
 import { db } from '../db/db';
 import { collection, query, getDocs, where, FieldPath, firestore} from 'firebase/firestore';
 
-
-const ItemDetailContainer = () => {
-    let id = useParams();
-
-
+const ItemListContainerFilterVolkswagen = () => {
     const [item, setItem]= useState ([]);
-    const itemFiltered = item.filter((item) => {
-        return item.id === id.id;
-      });
-
     useEffect (() =>{
         const getItem = async () => {
-            const q = query(collection(db, "Autos"));
+            const q = query(collection(db, "Autos"), where ("marca", "==", "Volkswagen"));
             const docs = [];
             const querySnapshot = await getDocs(q);
             querySnapshot.forEach((doc) => {
@@ -27,13 +17,11 @@ const ItemDetailContainer = () => {
           };
           getItem();
     }, [] );
-    console.log(itemFiltered);
+    console.log(item);
     return (
-        <div className='Item'>
-            {itemFiltered.map((item) => {
-            return <ItemDetail data={item} key={item.id} />;
-          })}
+        <div>
+        <ItemList items={item}/>
         </div>
     )
 }
-export default ItemDetailContainer;
+export default ItemListContainerFilterVolkswagen;

@@ -3,10 +3,10 @@ import React from "react";
 import Item from '../Item/Item';
 import "./Item.css";
 
-const ItemList = ({users}) => {
+const ItemList = ({items}) => {
     return (
         <div className="Item">
-    {users.map((user)=> {return <Item data={user}/>})}
+    {items.map((item)=> {return <Item data={item}/>})}
     </div>
     )
 }

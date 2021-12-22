@@ -17,11 +17,13 @@ const Item = ({data}) => {
   return (
     <div className="Item">
   <Card >
-    <Image src={data.avatar_url} wrapped ui={false} onClick={ () => navigate("/item/"+data.id)}/>
+    <Image src={data.img} wrapped ui={false} onClick={ () => navigate("/item/"+data.id)}/>
     <Card.Content>
-      <Card.Header>{data.login}</Card.Header>
-      <Card.Meta>{data.id}</Card.Meta>
-      <Card.Description>{data.url}</Card.Description>
+      <Card.Header>{data.marca}</Card.Header>
+      <Card.Header>{data.modelo}</Card.Header>
+      <Card.Meta>{data.año}</Card.Meta>
+      <Card.Description>${(data.precio).toLocaleString()}</Card.Description>
+      <Card.Description>Stock: {data.stock}</Card.Description>
     </Card.Content>
   </Card>
   </div>

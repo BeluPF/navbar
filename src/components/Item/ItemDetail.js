@@ -8,25 +8,29 @@ const ItemDetail = ({data}) => {
 
  const [itemCounter, setItemCounter] = React.useState(0);
   const saveCounter = (counter) => {
-      const prodCart = {id:data.login, url:data.url, cant:counter}
+      const prodCart = {id: data.id, marca:data.marca, modelo:data.modelo, año:data.año, motor:data.motor, img:data.img, precio: data.precio, stock:data.stock, tipo:data.tipo, cant:counter}
       const checkForItems = state.filter(value => value.id === data.id)
       console.log("esto es checkforitems: ", checkForItems);
       if ((checkForItems.length > 0)) {
         alert ("producto ya añadido, vaya al carrito para ajustar cantidades")
       } else {      
         setState([...state, prodCart]);
+        alert ("producto agregado al carrito")
       }
   }
   console.log(state);
   return(
 
   <Card className="Item">
-    <Image src={data.avatar_url} wrapped ui={false} />
+    <Image src={data.img} wrapped ui={false} />
     <Card.Content>
-      <Card.Header>{data.login}</Card.Header>
-      <Card.Meta>{data.id}</Card.Meta>
-      <Card.Description>{data.url}</Card.Description>
-      <Contador countItem={saveCounter}/>
+      <Card.Header>{data.modelo}</Card.Header>
+      <Card.Header>{data.marca}</Card.Header>
+      
+      <Card.Description>{data.año}</Card.Description>
+      <Card.Description>${(data.precio).toLocaleString()}</Card.Description>
+      <Card.Description>Stock: {data.stock}</Card.Description>
+      <Contador stockItem={data.stock} countItem={saveCounter}/>
     </Card.Content>
   </Card>
   
