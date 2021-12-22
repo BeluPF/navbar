@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Button, Input } from "semantic-ui-react";
 import "./form.css";
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
 
 //Firebase
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "./db"
+
 
 
 const initialState = {
@@ -13,8 +16,11 @@ const initialState = {
   address: "",
   email: ",",
 };
+let date = new Date()
+console.log(date);
 
 const Form = () => {
+    const [state] = useContext(CartContext);
   const [values, setValues] = useState(initialState);
   //const [purchaseID, setPurchaseID] = useState("");
 
@@ -27,7 +33,7 @@ const Form = () => {
     e.preventDefault();
 
     const docRef = await addDoc(collection(db, "purchases"), {
-      values,
+      values, state, date
     });
     console.log("Document written with ID:", docRef.id);
 
