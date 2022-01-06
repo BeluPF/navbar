@@ -1,17 +1,12 @@
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
-import Contador from "./ItemCount";
 import "./Item.css";
 import { useNavigate } from "react-router-dom";
 
 
 
 const Item = ({data}) => {
-  const [itemCounter, setItemCounter] = React.useState(0);
-  const saveCounter = (counter) => {
-     setItemCounter (counter)
-     console.log("se guardo el item ", itemCounter)
-  }
+
   let navigate = useNavigate();
   
   return (

@@ -8,7 +8,7 @@ const Contador = ({countItem, stockItem}) => {
     if (counter !== parseInt(stockItem)) {
     setCounter(counter+1)}}
   const handleCounterDown = () => {
-    if (counter !== 0) {
+    if (counter !== 1) {
     setCounter(counter-1)}
     }
   const onAdd = () => {

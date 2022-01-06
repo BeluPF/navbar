@@ -10,8 +10,7 @@ const Cart = () =>{
     let navigate = useNavigate();
 return (
     <div>
-        <Form />
-    <h1>Carro de compras</h1>
+    <h1 style={{marginBotom: "20px"}} >Carro de compras</h1>
     
 <Grid columns={3} divided>
 {state.map( (prod) => {
@@ -29,14 +28,17 @@ return (
    
 )}
  </Grid>
-    <div>Cantidad de productos: {cantItems()} </div> 
+    <div style={{marginTop: "20px"}}>Cantidad de productos: {cantItems()} </div> 
     <div>Cantidad de items: {cantProd()}</div>
-    { cantProd()==0 && <div>
+    { cantProd()===0 && <div>
         <h1>Carrito Vacio</h1>
         <button onClick = { () => navigate("/")}>Volver a productos</button>
         </div>
         }
+        <Form />
     </div>)
+    
+    
 
 }
 

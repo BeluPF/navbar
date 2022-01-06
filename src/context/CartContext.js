@@ -1,5 +1,5 @@
-import { identifier } from "@babel/types";
-import React, {useContext} from "react";
+
+import React from "react";
 
 const CartContext = React.createContext();
 

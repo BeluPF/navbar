@@ -6,7 +6,6 @@ import { collection, query, getDocs} from 'firebase/firestore';
 
 const ItemListContainer = () => {
     const [items, setItems]= useState ([]);
-    const [loading, setLoading] = useState(true);
     useEffect (() =>{
         const getItems = async () => {
             const q = query(collection(db, "Autos"));
@@ -16,7 +15,7 @@ const ItemListContainer = () => {
               docs.push({ ...doc.data(), id: doc.id });
             });
             setItems(docs);
-            setLoading(false);
+           
           };
           getItems();
     }, [] );

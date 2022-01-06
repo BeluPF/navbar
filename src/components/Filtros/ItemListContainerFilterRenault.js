@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from '../Item/ItemList';
 import { db } from '../db/db';
-import { collection, query, getDocs, where, FieldPath, firestore} from 'firebase/firestore';
+import { collection, query, getDocs, where} from 'firebase/firestore';
 
 const ItemListContainerFilterRenault = () => {
     const [item, setItem]= useState ([]);

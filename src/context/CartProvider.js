@@ -1,12 +1,8 @@
-import React, {createContext, useState} from 'react';
+import React, {useState} from 'react';
 import CartContext from './CartContext';
 
 const CartProvider = (props) => {
     const [state, setState] =useState([]);
-
-    const emptyCart = () => {
-        setState([]);
-    };
 
 const cantItems = () => {
     let qItems = 0

@@ -6,7 +6,6 @@ import "./Item.css";
 const ItemDetail = ({data}) => { 
   const [state, setState] = useContext(CartContext);
 
- const [itemCounter, setItemCounter] = React.useState(0);
   const saveCounter = (counter) => {
       const prodCart = {id: data.id, marca:data.marca, modelo:data.modelo, año:data.año, motor:data.motor, img:data.img, precio: data.precio, stock:data.stock, tipo:data.tipo, cant:counter}
       const checkForItems = state.filter(value => value.id === data.id)
