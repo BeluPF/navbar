@@ -16,7 +16,7 @@ return (
 {state.map( (prod) => {
 
     return (
-    <Grid.Row>
+    <Grid.Row key={prod.id}>
       <Grid.Column>
         <Image src= {prod.img} />
         <div> Producto: {prod.marca} {prod.modelo} {prod.motor} </div>

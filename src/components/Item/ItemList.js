@@ -6,7 +6,7 @@ import "./Item.css";
 const ItemList = ({items}) => {
     return (
         <div className="Item">
-    {items.map((item)=> {return <Item data={item}/>})}
+    {items.map((item)=> {return <Item key={item.id} data={item}/>})}
     </div>
     )
 }
