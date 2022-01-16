@@ -4,7 +4,7 @@ import "./components/Item/Item.css";
 import {  BrowserRouter,  Routes,  Route} from "react-router-dom";
 import ItemDetailContainer from "./components/Item/ItemDetailContainer";
 import ItemListContainer from "./components/Item/ItemListContainer";
-import Cart from "./components/Cart/Cart";
+import Cart from "./components/cart/Cart";
 import NavBar from "./components/NavBar/NavBar";
 import CartProvider from "./context/CartProvider";
 import ItemListContainerFilterPeugeot from "./components/Filtros/ItemListContainerFilterPeugeot";
